@@ -56,5 +56,16 @@ window.addEventListener('load', () => {
           });
   }
 
+  // Inicializa con una ciudad por defecto
+  actualizarClima('Madrid');
 
+  // Maneja el cambio en el select
+  document.getElementById('Departamento').addEventListener('change', (e) => {
+      const ciudadSeleccionada = e.target.value;
+      if (ciudadSeleccionada) {
+          actualizarClima(ciudadSeleccionada);
+      }
+  });
+
+  
 });
